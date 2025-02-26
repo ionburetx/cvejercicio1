@@ -1,3 +1,81 @@
+
+header{
+background-color: #000000;
+padding: 20px;
+margin-bottom: 60px;
+}
+
+a[href^="mailto:"] {
+  color: orange; /* Cambia el color a blanco */
+  text-decoration: none;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.nombre{
+  display: inline-block;
+  position: relative;
+  padding-bottom: 5px;
+  color: #ffffff;
+}
+
+.nombre::after{
+  content: "";
+  position: absolute;
+  bottom: -15px; /* Coloca la línea justo debajo del texto */
+  left: 0;
+  width: 140%; /* Extiende la línea más allá del ancho del texto */
+  height: 1px; /* El grosor de la línea */
+  background-color: white; /* Color de la línea */
+
+}
+
+p{
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.bio {
+color: #ffffff;
+font-family: Arial, Helvetica, sans-serif;
+margin-top: 20px;
+width: 67%;
+}
+
+.bio2{
+color: #ffffff;
+font-family: 'Times New Roman', Times, serif;
+width: 67%;
+}
+
+#objective {
+  font-style: italic;
+}
+
+.tel{
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+font-style: normal;
+}
+.pic {
+  width: 200px; /* Ancho del contenedor cuadrado */
+  height: 290px; /* Alto del contenedor cuadrado */
+  overflow: hidden; /* Asegura que la imagen no se desborde fuera del contenedor */
+  position: relative;
+}
+
+.pic img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover; /* La imagen cubrirá el área del cuadrado sin distorsionarse */
+  display: block; /* Asegura que la imagen se comporte como un bloque */
+  border: 5px solid white;
+  border-radius: px;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -9,15 +87,38 @@ body {
   margin: 40px auto 60px;
 }
 
-header {
-  display: grid;
-  grid-template-columns: 1fr auto;
+span{
+  font-style: italic;
+  font-size: smaller;
+  font-weight: lighter;
+  color: #999;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
 dl {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: 1rem;
+}
+
+dt{
+  color: #a36d2e;
+  font-style: italic;
+  font-weight: bold;
+  font-size: larger;
+  text-align: end;
+  width: 150px;
+}
+
+dd{
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-left: 3px solid rgb(255, 156, 42);
+  padding-left: 10px;
+}
+
+ul{
+  margin-bottom: 30px;
+  margin-left: 20px;
 }
 
 #pic {
@@ -25,4 +126,13 @@ dl {
   height: 250px;
   border: 1px solid #999;
   padding: 1rem;
+}
+
+h2{
+  color: #a36d2e;
+  margin-bottom: 10px;
+}
+
+.formacion{
+  margin-bottom: 30px;
 }
