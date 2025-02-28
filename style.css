@@ -14,6 +14,7 @@ header {
   display: grid;
   grid-template-columns: 1fr auto;
 }
+
 .nombre{
   display: inline-block;
   position: relative;
@@ -35,6 +36,13 @@ header {
 p{
   padding: 5px;
   margin-bottom: 10px;
+}
+
+pbio{
+  width: 200px;
+  word-wrap: break-word;
+  color: #ffffff;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .bio {
@@ -59,6 +67,21 @@ width: 67%;
   font-family: Arial, Helvetica, sans-serif;
 font-style: normal;
 }
+
+summary{
+  color: #ffffff;
+  text-align: left;
+}
+
+.footertext{
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  padding: 0%;
+  margin-bottom: 0px;
+  text-align: end;
+}
+
 .pic {
   width: 200px; /* Ancho del contenedor cuadrado */
   height: 290px; /* Alto del contenedor cuadrado */
@@ -136,3 +159,105 @@ h2{
 .formacion{
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 768px) {
+  header{
+    background-color: #000000;
+    margin-bottom: 10%;
+    }
+    .nombre{
+      display: inline-block;
+      line-height: 40px;
+      position: relative;
+      padding-bottom: 5%;
+      color: #ffffff;
+    }
+
+    .toggle-text summary {
+      display: block; /* Mostrar el resumen en pantallas pequeñas */
+    }
+  
+    .toggle-text p2 {
+      display: none; /* Ocultar el contenido en pantallas pequeñas */
+    }
+  
+    .toggle-text[open] p2 {
+      display: block; /* Mostrar el contenido cuando el resumen esté abierto */
+    }
+
+    .pic {
+      width: 120%; /* Ancho del contenedor cuadrado */
+      height: 230px; /* Alto del contenedor cuadrado */
+      overflow: hidden; /* Asegura que la imagen no se desborde fuera del contenedor */
+      position: relative;
+    }    
+    
+    .pic img {
+      width: 90%;
+      height: 90%;
+      object-fit: cover; /* La imagen cubrirá el área del cuadrado sin distorsionarse */
+      display: block; /* Asegura que la imagen se comporte como un bloque */
+      border: 5px solid white;
+    }
+
+    .bio2{
+      color: #ffffff;
+      font-family: 'Times New Roman', Times, serif;
+      text-align: center;
+      max-width: none;
+      }
+
+    section{
+      width: 200%;
+      text-align: center;
+    }
+
+    body {
+      font: 16px Helvetica, Sans-Serif;
+      line-height: 24px;
+      width: 95%;
+      margin: 4% auto 6%;
+    }
+
+    dt{
+      color: #a36d2e;
+      font-style: italic;
+      font-weight: bold;
+      font-size: larger;
+      text-align: end;
+      width: 100px;
+      font-size: 15px;
+    }
+
+    dd{
+      margin-bottom: 10px;
+      margin-left: 10px;
+      border-left: 3px solid rgb(255, 156, 42);
+      padding-left: 10px;
+      font-size: 13px;
+    }
+    
+    ul{
+      margin-bottom: 30px;
+      margin-left: 20px;
+      font-size: 10px;
+    }
+
+    pbio {
+      display: none;
+    }
+   }
+
+@media screen and (min-width: 768px) {
+
+  .toggle-text summary {
+    display: none; /* Ocultar el resumen en pantallas grandes */
+  }
+
+  .toggle-text p2 {
+    display: block; /* Mostrar el contenido en pantallas grandes */
+  }
+  details {
+    display: none;
+  }
+ }
